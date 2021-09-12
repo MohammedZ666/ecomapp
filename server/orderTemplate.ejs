@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        /* base styles */
+        * {
+            font-family: "Quicksand";
+            color: rgb(0, 0, 0);
+
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width:100%; margin: 10% auto;">
+        <caption style="margin-bottom:1%">
+            <div style="margin-bottom:3%; font-size:16px;line-height: 1.5; text-align:left
+">
+                Customer name: <b><%= data.username =%></b><br>
+                Address: <b><%= data.address=%></b><br>
+                phone: <b><%= data.phone%></b> <b><br>
+                    Order no: <b></b><%= data._id =%></b>
+
+            </div>
+
+            <div style="font-size:24px">
+
+                <b> Bill </b>
+            </div>
+        </caption>
+        <tr>
+            <th>Sl</th>
+            <th>Product</th>
+            <th>Rate</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <%= var total = 0 =%>
+            <%= var delivery = 65 =%>
+
+            <%= for (let i = 0; i<data.cart.length; i++){=%>
+            <td><%= i + 1 =%></td>
+            <td><%= data.cart[i].name =%></td>
+            <td><%= data.cart[i].price =%></td>
+            <td><%= data.counts[i] =%></td>
+            <td><%= data.counts[i] * data.cart[i].price =%></td>
+            <%= total+= data.counts[i] * data.cart[i].price } =%>
+        </tr>
+        <tr>
+
+            <td style="border: 0px"></td>
+            <td style="border: 0px"></td>
+            <td style="border: 0px"></td>
+            <td> Delivery charge </td>
+            <td> <%= delivery =%> </td>
+        </tr>
+
+        <tr>
+            <td style="border: 0px"></td>
+            <td style="border: 0px"></td>
+            <td style="border: 0px"></td>
+            <td> Net Price </td>
+            <td> <%= total + delivery =%></td>
+        </tr>
+    </table>
+    <div style="width: 100%; text-align:center; font-size:16px">
+        <b>** This memo is computer generated, hence does not require any signature **<b>
+    </div>
+</body>
+
+</html>

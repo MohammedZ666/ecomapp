@@ -1,0 +1,7 @@
+*/node_modules
+server/.git
+server/*.env
+server/config/firebase_secret.json
+server/config/credentials.js
+.DS_Store
+*/npm-debug.log

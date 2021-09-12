@@ -1,0 +1,23 @@
+{  "categories":[
+    "Men", "Women", "Child"
+    ],
+   
+    "products": [
+      {
+        "name": "Boy T-Shirt",
+        "images":[],
+        "price": 96.4,
+        "categories":["Men", "Child"],
+        "description": "This is a description of tshirt",
+        "id": 1
+      },
+      {
+        "name": "Girl T-Shirt",
+        "images":[],
+        "price": 96.4,
+        "categories":["Women", "Child"],
+        "description": "This is a description of tshirt",
+        "id": 1
+      }
+    ]
+  }

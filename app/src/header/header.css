@@ -1,0 +1,150 @@
+/*Desktop View*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-bottom: 1px solid #f2f2f2;
+
+}
+
+.header h1 {
+    color: inherit;
+
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-options {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.nav-options li {
+    float: left;
+    padding: 16px;
+}
+
+.mobile-option {
+    display: none;
+}
+
+.option :hover {
+    color: #f1356d;
+}
+
+.signin-up {
+    display: flex;
+    padding: 0px 5px;
+    list-style-type: none;
+}
+
+.sign-in {
+    padding-right: 50px;
+    align-self: center;
+}
+
+.sign-in :hover {
+    color: #f1356d;
+}
+
+.signup-btn {
+    padding: 10px 10px;
+    height: 2.4rem;
+    border-radius: 3px;
+    background: #f1356d;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 648px) {
+
+    /*Mobile View */
+    .header {
+        padding: 0px 10px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nav-options {
+        display: flex;
+        width: 100%;
+        height: 350px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s ease;
+        flex-direction: column;
+        list-style-type: none;
+        grid-gap: 0px;
+    }
+
+    .nav-options.active {
+        background: rgba(255, 255, 255, 1);
+        left: 0;
+        transition: all 0.5s ease;
+        z-index: 2;
+        align-content: center;
+        padding-left: 0px;
+    }
+
+    .menu-icon {
+        width: 1%;
+        height: 1%;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vw;
+        padding: 30px 0px;
+    }
+
+    .sign-up {
+
+        border-radius: 3px;
+        background: #f1356d;
+        color: white;
+        padding: 20px 0px;
+        width: 80%;
+        align-self: center;
+        border-radius: 8px;
+    }
+
+    .signin-up {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    display: block;
+}
