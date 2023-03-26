@@ -34,10 +34,10 @@
         <caption style="margin-bottom:1%">
             <div style="margin-bottom:3%; font-size:16px;line-height: 1.5; text-align:left
 ">
-                Customer name: <b><%= data.username =%></b><br>
-                Address: <b><%= data.address=%></b><br>
-                phone: <b><%= data.phone%></b> <b><br>
-                    Order no: <b></b><%= data._id =%></b>
+                Customer name: <b><%= data.username %></b><br>
+                Address: <b><%= data.address %></b><br>
+                phone: <b><%= data.phone %></b> <b><br>
+                    Order no: <b></b><%= data._id %></b>
 
             </div>
 
@@ -54,16 +54,16 @@
             <th>Total</th>
         </tr>
         <tr>
-            <%= var total = 0 =%>
-            <%= var delivery = 65 =%>
+            <% var total = 0 %>
+            <% var delivery = 12 %>
 
-            <%= for (let i = 0; i<data.cart.length; i++){=%>
-            <td><%= i + 1 =%></td>
-            <td><%= data.cart[i].name =%></td>
-            <td><%= data.cart[i].price =%></td>
-            <td><%= data.counts[i] =%></td>
-            <td><%= data.counts[i] * data.cart[i].price =%></td>
-            <%= total+= data.counts[i] * data.cart[i].price } =%>
+            <% for (let i = 0; i<data.cart.length; i++){%>
+            <td><%= i + 1 %></td>
+            <td><%= data.cart[i].name %></td>
+            <td><%= data.cart[i].price %></td>
+            <td><%= data.counts[i] %></td>
+            <td><%= data.counts[i] * data.cart[i].price %></td>
+            <% total+= data.counts[i] * data.cart[i].price } %>
         </tr>
         <tr>
 
@@ -71,15 +71,15 @@
             <td style="border: 0px"></td>
             <td style="border: 0px"></td>
             <td> Delivery charge </td>
-            <td> <%= delivery =%> </td>
+            <td> <%= delivery %> </td>
         </tr>
 
         <tr>
             <td style="border: 0px"></td>
-            <td style="border: 0px"></td>
+            <td style="border: 0px"></td>z
             <td style="border: 0px"></td>
             <td> Net Price </td>
-            <td> <%= total + delivery =%></td>
+            <td> <%= total + delivery %></td>
         </tr>
     </table>
     <div style="width: 100%; text-align:center; font-size:16px">
