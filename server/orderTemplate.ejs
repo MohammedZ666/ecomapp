@@ -53,11 +53,12 @@
             <th>Quantity</th>
             <th>Total</th>
         </tr>
-        <tr>
-            <% var total = 0 %>
-            <% var delivery = 12 %>
+        <% var total = 0 %>
+        <% var delivery = 12 %>
 
-            <% for (let i = 0; i<data.cart.length; i++){%>
+        <% for (let i = 0; i<data.cart.length; i++){%>
+        <tr>
+
             <td><%= i + 1 %></td>
             <td><%= data.cart[i].name %></td>
             <td><%= data.cart[i].price %></td>
@@ -76,7 +77,7 @@
 
         <tr>
             <td style="border: 0px"></td>
-            <td style="border: 0px"></td>z
+            <td style="border: 0px"></td>
             <td style="border: 0px"></td>
             <td> Net Price </td>
             <td> <%= total + delivery %></td>
