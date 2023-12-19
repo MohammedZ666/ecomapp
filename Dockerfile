@@ -8,7 +8,8 @@ RUN cd server \
     npm install \
     rm -rf build \
     npm run build \
-    cp -r build/* ../server/public/ 
+    cp -r build/* ../server/public/ \
+    ls
 
 EXPOSE 3000
-CMD cd server; npm start
+CMD cd server;ls -l;npm start
