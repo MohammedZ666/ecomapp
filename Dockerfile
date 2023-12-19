@@ -2,7 +2,7 @@ FROM node:18.13
 WORKDIR /app
 COPY . .
 RUN cd server
-RUN npm install
+RUN pwd & npm install
 RUN rm -rf public/*
 RUN cd ../app
 RUN npm install
