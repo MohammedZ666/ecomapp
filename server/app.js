@@ -40,6 +40,7 @@ mongoose
         pass: process.env.PASS,
       },
     };
+    try{
     // Creating a Nodemailer Transport instance
     const transporter = nodemailer.createTransport(transport);
 
@@ -51,6 +52,10 @@ mongoose
         console.log("Server is ready to send emails");
       }
     });
+    }
+    catch(error){
+      console.log("Email and password not provided", error)
+    }
     app.listen(process.env.PORT || 3000, function () {
       console.log(
         "Express server listening on port %d in %s mode",
