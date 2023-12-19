@@ -41,17 +41,18 @@ mongoose
       },
     };
     try{
-    // Creating a Nodemailer Transport instance
-    const transporter = nodemailer.createTransport(transport);
-
-    // Verifying the Nodemailer Transport instance
-    transporter.verify((error, success) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Server is ready to send emails");
-      }
-    });
+      
+      // Creating a Nodemailer Transport instance
+      const transporter = nodemailer.createTransport(transport);
+      
+      // Verifying the Nodemailer Transport instance
+      transporter.verify((error, success) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Server is ready to send emails");
+        }
+      });
     }
     catch(error){
       console.log("Email and password not provided", error)
