@@ -134,7 +134,7 @@ const forgot_password = async (req, res) => {
                 console.log(err);
             } else {
                 var mainOptions = {
-                    from: `"Zishan"${creds.USER} `,
+                    from: process.env.USER,
                     to: email,
                     subject: 'Reset your password',
                     html: data
