@@ -1,4 +1,4 @@
-# Ecomapp
+# ecomapp
 
 This is an e-commerce platform developed with the MERN stack. Github CI/CD was used to build and deploy the project to Docker. Features include:
 * User login/registration, multi-product-based orders, product query with category/keywords, cart system, and commenting on product pages.
