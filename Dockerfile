@@ -1,15 +1,14 @@
 FROM node:18.13
 WORKDIR /workspace
 COPY . .
-RUN cd server
-RUN pwd & npm install
-RUN rm -rf public/*
-RUN cd ../app
-RUN npm install
-RUN rm -rf build
-RUN npm run build
-RUN cp -r build/* ../server/public/
-RUN cd ../server
-RUN npm start
+RUN cd server \
+    npm install \
+    rm -rf public/* \
+    cd ../app \
+    npm install \
+    rm -rf build \
+    npm run build \
+    cp -r build/* ../server/public/ 
+
 EXPOSE 3000
-CMD [ "npm","start" ]
+CMD cd server; npm start
