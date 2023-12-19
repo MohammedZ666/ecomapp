@@ -41,7 +41,7 @@ const place_order = async (req, res) => {
           console.log(err);
         } else {
           var mainOptions = {
-            from: "obaida.zisan@gmail.com",
+            from: process.env.USER,
             to: req.body.email,
             subject: "Order no. " + order._id,
             html: data,
