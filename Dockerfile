@@ -1,5 +1,5 @@
 FROM node:18.13
-WORKDIR /app
+WORKDIR /workspace
 COPY . .
 RUN cd server
 RUN pwd & npm install
