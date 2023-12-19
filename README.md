@@ -1,6 +1,6 @@
 ### Installing (docker)
 
-`docker pull docker mohammedz666/ecomapp`
+`docker pull mohammedz666/ecomapp`
 
 #### For subsequent runs, just run the follwing command only
 
